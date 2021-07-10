@@ -1,25 +1,10 @@
-<script lang="ts">
-	import CLUI from './clui';
+<script>
+  import Clui from './Clui.svelte';
+	const create = (selector) => {
+    const clui = new Clui({
+      target: document.querySelector(selector)
+    });
+  };
 
-	// @ts-expect-error
-	window.clui = new CLUI();
+  window.create = create;
 </script>
-
-<div id="clui-fragment">
-	<div class="cli">
-		<div class="input">
-			<input type="text" placeholder="Enter a command">
-		</div>
-		<div class="dropdown">
-			<div class="item">Command A</div>
-			<div class="item">Command B</div>
-		</div>
-		<div class="form"></div>
-	</div>
-</div>
-
-<style>
-	#clui-fragment {
-		color: white;
-	}
-</style>
