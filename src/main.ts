@@ -1,7 +1,3 @@
-import App from './App.svelte';
+import Clui from './Clui.svelte';
 
-const app = new App({
-  target: document.body
-});
-
-export default app;
+export { Clui };

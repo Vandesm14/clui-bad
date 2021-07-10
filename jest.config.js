@@ -1,7 +1,16 @@
 module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'node',
-	collectCoverageFrom: [
-		'src/**/*.test.ts'
-	]
+  moduleFileExtensions: [
+    'js',
+    'ts',
+    'svelte'
+  ],
+  transform: {
+    '^.+\\.svelte$': [
+      "svelte-jester",
+      {
+        preprocess: true
+      }
+    ],
+    '^.+\\.ts$': "ts-jest"
+  }
 };

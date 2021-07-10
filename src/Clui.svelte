@@ -1,3 +1,6 @@
+<!-- fake warning -->
+<svelte:options tag="clui-main" immutable={true} />
+
 <script lang="ts">
 	import CLUI from './clui';
 
@@ -5,7 +8,7 @@
 	window.clui = new CLUI();
 </script>
 
-<div id="clui-main">
+<div id="clui-fragment">
 	<div class="cli">
 		<div class="input">
 			<input type="text" placeholder="Enter a command">
@@ -19,7 +22,7 @@
 </div>
 
 <style>
-	#clui-main {
+	#clui-fragment {
 		color: white;
 	}
 </style>
